@@ -1,0 +1,12 @@
+.Dashboard {
+  display: flex;
+  color: #333;
+}
+
+.sidebarBox {
+  width: max-content;
+}
+
+.outletBox {
+  flex: 1;
+}

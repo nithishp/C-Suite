@@ -1,0 +1,200 @@
+.main-content {
+  padding: 0px 20px 20px 20px;
+}
+
+/* Design 3 */
+.cardContainer3 {
+  padding: 20px;
+}
+
+.cardContainer3 h2 {
+  padding: 10px;
+  color: #8949ff;
+  margin-bottom: 20px;
+}
+
+.courseContainer3 {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.courseLessonBox3 h5 {
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: max-content;
+  background-color: #8949ff;
+}
+
+.courseCard3 {
+  height: 100%;
+  display: flex;
+  padding: 12px;
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+  border-radius: 11px;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(198, 197, 197, 0.59);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease-in-out;
+}
+
+.courseCard3:hover {
+  background-color: rgb(189, 189, 189);
+}
+
+.courseOverlay3 {
+  z-index: 1;
+  height: 100%;
+  position: relative;
+  transform: translateY(0%);
+  transition: all 0.4s ease-in-out;
+}
+
+.courseCard3:hover .courseOverlay3 {
+  opacity: 0.4;
+  transform: scale(0.93) translateY(1%);
+}
+
+.courseImageBox3 {
+  position: relative;
+}
+
+.courseImage3 {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.courseImageTxt3 {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  z-index: 2;
+  color: white;
+  font-size: medium;
+  padding: 1% 3%;
+  font-weight: 500;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: opacity 0.4s ease-in-out;
+  background-color: rgba(63, 0, 179, 0.65);
+}
+
+.courseDetails3 {
+  z-index: 2;
+  display: flex;
+  padding: 10px 0;
+  min-height: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.courseDetails3 p {
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 3px 0 12px 3px;
+}
+
+.courseDetailBtn3,
+.lessonDetailBtn3 {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 9px 15px;
+  font-size: 0.85em;
+  border-radius: 6px;
+  background-color: rgba(76, 3, 210, 1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.courseDetailBtn3:hover,
+.lessonDetailBtn3:hover {
+  background-color: rgba(63, 0, 179, 0.85);
+}
+
+.courseLessonBox3 {
+  position: absolute;
+  color: white;
+  top: 12%;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 88%;
+  padding: 20px;
+  display: flex;
+  z-index: 3;
+  opacity: 0;
+  flex-direction: column;
+  transform: translateY(100%);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.courseLessonBox3 ul {
+  padding: 0% 10px;
+  font-size: 0.85em;
+}
+
+.courseCard3:hover .courseLessonBox3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1125px) {
+  .main-content {
+    padding: 0px 5px 5px 5px;
+  }
+
+  .cardContainer3 h2 {
+    padding: 5px;
+    font-size: large;
+    margin-bottom: 10px;
+  }
+
+  .courseLessonBox3 h5 {
+    font-size: medium;
+    font-weight: 400;
+  }
+
+  .courseLessonBox3 ul {
+    padding: 0px 5px 0px 10px;
+    font-size: 0.7em;
+  }
+
+  .courseContainer3 {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .courseImage3 {
+    height: 150px;
+  }
+
+  .courseImageTxt3 {
+    font-size: x-small;
+  }
+
+  .courseDetails3 p {
+    font-size: 0.7em;
+  }
+
+  .courseDetailBtn3,
+  .lessonDetailBtn3 {
+    padding: 8px 10px;
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 835px) {
+  .courseContainer3 {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
